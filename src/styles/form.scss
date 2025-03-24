@@ -180,3 +180,26 @@ input[type=range] {
   input[type=range]:focus::-ms-fill-upper {
     background: #367ebd;
   }
+
+
+
+.form__input {
+  padding: 12px 10px;
+  background-color: rgb(255 255 255 / 85%);
+  border: 1px solid $white;
+  border-radius: 3px;
+  font-size: 18px;
+  color: $color-text;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    font-size: 18px;
+    color: $color-text;
+  }
+}
+
+.form__select {
+
+}
+
