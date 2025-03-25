@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'media' as *;
 
 .hero {
     padding-block: 200px 70px;
@@ -9,11 +10,17 @@
         url("../assets/images/bg.png") type("image/png")
     ) 50% / cover;
     background-repeat: no-repeat;
+    @include mobile {
+        padding-block: 150px 50px;
+    }
 
     & .container {
         display: flex;
         flex-direction: column;
         gap: 80px;
+        @include mobile {
+            gap: 50px;
+        }
     }
     &__title {
         font-size: 48px;
@@ -21,6 +28,12 @@
         text-transform: uppercase;
         text-wrap: balance;
         max-width: 16em;
+        @include tablet {
+            font-size: 38px;
+        }
+        @include mobile {
+            font-size: 30px;
+        }
     }
     &-content {
         &__title {
@@ -34,6 +47,9 @@
             gap: 5px;
             font-size: 20px;
             padding-left: 25px;
+            @include mobile {
+                font-size: 18px;
+            }
             li {
                 position: relative;
                 &::after {
@@ -50,6 +66,11 @@
     .buttons {
         display: flex;
         align-items: center;
-        gap: 30px
+        gap: 30px;
+        @include mobile {
+            flex-direction: column;
+            align-items: unset;
+            gap: 20px;
+        }
     }
 }

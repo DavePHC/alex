@@ -6,10 +6,14 @@
     background-color: $footer-bg;
     color: $white;
 
-    & .container {
+    .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include mobile {
+            flex-direction: column;
+            gap: 25px;
+        }
         & > *:not(:last-child) {
             position: relative;
             &::after {
@@ -22,7 +26,20 @@
                 width: 1px;
                 height: 18px;
                 background-color: $payment-method;
+                @include laptop {
+                    display: none;
+                }
             }
+        }
+    }
+
+    &__copyright {
+        @include tablet {
+            max-width: 132px;
+        }
+        @include mobile {
+            max-width: unset;
+            order: 3;
         }
     }
 
@@ -42,6 +59,23 @@
             align-items: center;
             gap: 10px;
             color: $white;
+        }
+    }
+    .payment-methods {
+        @include mobile-s {
+            gap: 0;
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+    .socials {
+        @include tablet {
+            flex-direction: column;
+            gap: 10px;
+            align-items: end;
+        }
+        @include mobile {
+            align-items: center;
         }
     }
 }
