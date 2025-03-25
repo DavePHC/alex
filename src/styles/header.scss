@@ -45,10 +45,19 @@
     }
 
     &__navigation {
+        @include tablet {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+        }
         &-list {
             display: flex;
             align-items: center;
             gap: 60px;
+            @include tablet {
+                flex-direction: column;
+            }
         }
         &-link {
             text-transform: uppercase;
@@ -106,6 +115,7 @@
 
 .burger-button {
     display: inline-flex;
+    z-index: 2;
     align-items: center;
     justify-content: center;
     width: 40px;
