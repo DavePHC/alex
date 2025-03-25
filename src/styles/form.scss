@@ -80,24 +80,33 @@
         &__range {
             grid-column-start: span 2;
         }
-        // input[type="range"] {
-        //     -webkit-appearance: none;
-        //     appearance: none;
-        //     width: 100%;
-        //     background: transparent;
-        // }
-        
         .button_accept {
             grid-column-start: span 3;
             margin: 0 auto;
+            font-size: 15px;
+            text-transform: uppercase;
             width: 100%;
         }
     }
 }
 
+.form__range {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .range-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    color: $white;
+  }
+}
+
+
+
 input[type=range] {
     -webkit-appearance: none;
-    margin: 18px 0;
     width: 100%;
   }
   input[type=range]:focus {
@@ -181,8 +190,6 @@ input[type=range] {
     background: #367ebd;
   }
 
-
-
 .form__input {
   padding: 12px 10px;
   background-color: rgb(255 255 255 / 85%);
@@ -198,3 +205,30 @@ input[type=range] {
     color: $color-text;
   }
 }
+.custom-file {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 10px;
+  background-color: $white;
+  border: 1px solid $color-accent;
+  border-radius: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  #fileInput {
+    appearance: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    z-index: -1;
+  }
+  span {
+    font-weight: 600;
+    font-size: 15px;
+    color: $color-text;
+  }
+}
+

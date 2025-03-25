@@ -151,10 +151,13 @@
             <input class="form__input" name="email" type="email" inputmode="email" placeholder="Ваш e-mail">
             <input class="form__input" name="name" type="text" placeholder="Ваше имя">
             <div class="form__range">
-              <label for="rangeInput">
-                Sed ut perspiciatis, unde omnis iste natus
-              </label>
-              <input id="rangeInput" type="range" name="range">
+              <div class="range-head">
+                <label for="rangeInput">
+                  Sed ut perspiciatis, unde omnis iste natus
+                </label>
+                <span id="rangeValue"></span>
+              </div>
+              <input id="rangeInput" type="range" name="range" min="0" max="100" step="1" value="75">
             </div>
             <label class="custom-file">
               <input id="fileInput" type="file" name="file">
